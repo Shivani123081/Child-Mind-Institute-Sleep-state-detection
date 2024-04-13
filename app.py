@@ -12,7 +12,7 @@ import streamlit_ext as ste
 st.markdown("<h1 style='text-align: center; color: black;'>Child Mind Institute challenge - sleep detection</h1>", unsafe_allow_html=True)
 #st.title("Child Mind Institute challenge - sleep detection")
 # image titre
-img_title = Image.open(os.path.join("input", "input_Health_Theme.jpg"))
+img_title = Image.open(os.path.join("input_Health_Theme.jpg"))
 st.image(img_title, caption="Source: mouser.in/blog/remote-sensing-fosters-healthier-lives")
 st.markdown("**Detection of sleep onset and wake from wrist-worn accelerometer data**:watch:")
 st.markdown('<div style="text-align: justify;">\
