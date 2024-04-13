@@ -23,7 +23,7 @@ st.markdown('<div style="text-align: justify;">\
                 unsafe_allow_html=True)
 st.divider()
 # logos kaggle and CMI
-img_logos = Image.open(os.path.join("input", "Kaggle_CMI.png"))
+img_logos = Image.open(os.path.join("Kaggle_CMI.png"))
 col1, col2, col3 = st.columns([1.2, 5, 1.2])
 col2.image(img_logos, use_column_width=True)
 
@@ -37,10 +37,10 @@ st.markdown('Visualization of the features of the series:')
 img1 = Image.open(os.path.join("input", "enmo_anglez.png"))
 st.image(img1)
 st.markdown('Visualization of enmo with sleep periods:zzz: (given by kaggle):')
-img2 = Image.open(os.path.join("input", "enmo_target.png"))
+img2 = Image.open(os.path.join("enmo_target.png"))
 st.image(img2)
 st.markdown('Visualization of enmo with sleep periods and model predictions:')
-img3 = Image.open(os.path.join("input", "enmo_target_prediction.png"))
+img3 = Image.open(os.path.join("enmo_target_prediction.png"))
 st.image(img3)
 line_break()
 st.header("Try it out:rocket:")
@@ -69,7 +69,7 @@ else:
             df_prepared = feature_engineering(df)
         with st.spinner("Loading pipeline..."):
             # load pipeline
-            fp_pipeline = os.path.join("input", "pipeline_01.pkl")
+            fp_pipeline = os.path.join("pipeline_01.pkl")
             pipeline_1 = pickle.load(open(fp_pipeline, 'rb'))
         with st.spinner("Predictions..."):
             # get predictions
@@ -120,7 +120,7 @@ if selected_series != None:
     with st.spinner("Loading pipeline..."):
 
         # load pipeline
-        fp_pipeline_2 = os.path.join("input", "pipeline_01.pkl")
+        fp_pipeline_2 = os.path.join("pipeline_01.pkl")
         pipeline_1 = pickle.load(open(fp_pipeline_2, 'rb'))
 
     with st.spinner("Predictions..."):
