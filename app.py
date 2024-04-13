@@ -83,7 +83,7 @@ else:
         st.dataframe(df_prediction.drop(columns=["row_id"]))
         st.markdown("The score column is the confidence of the model in the prediction.")
         with st.spinner("Creating prediction file..."):
-            prediction_file = df_prediction.to_csv().encode('utf-8'
+            prediction_file = df_prediction.to_csv().encode('utf-8')
         ste.download_button(
             label="Download prediction file",
             data=prediction_file,
